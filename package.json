@@ -7,7 +7,7 @@
     "config": "node-pre-gyp configure",
     "build": "node-pre-gyp build",
     "preinstall": "npm install node-pre-gyp node-gyp",
-    "postinstall": "npm install --fallback-to-build",
+    "postinstall": "node-pre-gyp install",
     "test": "tape test/start.js | tap-spec",
     "buildtest": "set PYTHON=C:\\Users\\nhuba\\.windows-build-tools\\python27\\python.exe&& npm run config && npm run build && npm test",
     "publish-binary": "git commit --allow-empty -m \"[publish binary]\""
